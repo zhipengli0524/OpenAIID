@@ -68,7 +68,7 @@ class ImageCutter(object):
 
         face = faces[self._bigIndex(faces)]
         x, y, w, h = face
-        new_imcv = image[y:y+h, x:x+w]
+        new_imcv = imcv[y:y+h, x:x+w]
         new_im = Image.fromarray(cv2.cvtColor(new_imcv, cv2.COLOR_BGR2RGB))
 
         if resize is not None:
